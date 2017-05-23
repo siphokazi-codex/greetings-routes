@@ -4,7 +4,7 @@ module.exports = function(){
   const counterMap = {};
 
   const index = function(req, res){
-    res.send(greetedList);
+    res.render('greetings/index', {greetings : greetedList});
   };
 
   const add = function(req, res){
@@ -25,8 +25,8 @@ module.exports = function(){
     counterMap[username] ++;
     const greetedCounter = counterMap[username]
 
-
-    res.redirect('/greeted');
+    res.send('Hello ' + username)
+    //;res.redirect('/greeted');
 
   }
 
