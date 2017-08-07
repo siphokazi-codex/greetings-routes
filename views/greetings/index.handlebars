@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Greeting</h1>
+
+  <form action="/greeted" method="post">
+    <label>Enter name:<label>
+    <input type="text" name="username" placeholder="Type name to greet"></br>
+    <input class="greet" type="submit" name="" value="Greet Me"><br><br>
+
+
+    <label class="hello">Hello, </label>{{username}}
+    {{greetings}}
+  </form>
+</div>
