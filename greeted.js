@@ -18,6 +18,8 @@ module.exports = function(){
 
   if(username && !foundName){
     greetedList.push(username);
+    //res.render('greetings/index', {message: 'Hello, ' + username});
+    req.flash('greetMessage', 'Hello, ');
   }
 
   if(counterMap[username] === undefined){

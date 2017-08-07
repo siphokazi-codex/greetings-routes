@@ -44,3 +44,7 @@ ul {
 input {
   display: inline;
 }
+
+.greetMessage {
+  color: #8e1002;
+}
