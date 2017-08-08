@@ -44,3 +44,11 @@ ul {
 input {
   display: inline;
 }
+
+.greetMessage {
+  font-weight: bold;
+}
+
+.error {
+  color: #a50808;
+}

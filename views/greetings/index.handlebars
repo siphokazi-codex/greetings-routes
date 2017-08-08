@@ -6,8 +6,22 @@
     <input type="text" name="username" placeholder="Type name to greet"></br>
     <input class="greet" type="submit" name="" value="Greet Me"><br><br>
 
+    <div class="greetMessage">
+      {{messages.greetMessage}}
+      {{greetings}}
+      <br>
+      <br>
+    <!--<label class="hello">Hello, </label><a id="hello">{greetings}<a> -->
+    <!--<label class="hello">Hello, </label>{username}}
+    {greetings}}-->
+  </div>
 
-    <label class="hello">Hello, </label>{{username}}
-    {{greetings}}
+  {{#if messages.error}}
+    <div class="error">
+      {{messages.error}}
+      <br>
+      <br>
+    </div>
+  {{/if}}
   </form>
 </div>
