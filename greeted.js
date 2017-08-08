@@ -15,11 +15,18 @@ module.exports = function(){
     return currentName === username;
   });
 
-
-  if(username && !foundName){
-    greetedList.push(username);
-    //res.render('greetings/index', {message: 'Hello, ' + username});
-    req.flash('greetMessage', 'Hello, ');
+  if (!username) {
+    req.flash('error', 'Name should not be blank');
+  }
+  else {
+    if(!foundName){
+      greetedList.push(username);
+      //res.render('greetings/index', {message: 'Hello, ' + username});
+      req.flash('greetMessage', 'Hello, ');
+    }
+    else {
+      req.flash('error', 'Name already exists!');
+    }
   }
 
   if(counterMap[username] === undefined){
