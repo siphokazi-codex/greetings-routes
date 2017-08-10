@@ -1,7 +1,7 @@
+
 body {
   background-color: #b2502c;
 }
-
 .container {
   background-color: #fff;
   width: 80%;
@@ -41,10 +41,18 @@ ul {
   margin-left: 42px;
 }
 
-#hello {
-  font-size: 20px;
+.hello {
+  font-size: 25px;
 }
 
 input {
   display: inline;
+}
+
+.greetMessage {
+  font-weight: bold;
+}
+
+.error {
+  color: #a50808;
 }
