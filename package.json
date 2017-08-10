@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
+    "express-flash": "git://github.com/RGBboy/express-flash.git",
+    "express-handlebars": "^3.0.0",
     "nodemon": "^1.11.0"
   }
 }

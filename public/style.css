@@ -1,0 +1,58 @@
+
+body {
+  background-color: #b2502c;
+}
+.container {
+  background-color: #fff;
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+  font-family: "Arial";
+
+}
+
+.greetMessage {
+
+}
+
+label {
+  margin-left: 4px;
+}
+
+.greet {
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.add {
+  font-size: 25px;
+}
+
+ul {
+  font-size: 20px;
+}
+
+.hello {
+  font-size: 25px;
+  margin-left: 42px;
+}
+
+.hello {
+  font-size: 25px;
+}
+
+input {
+  display: inline;
+}
+
+.greetMessage {
+  font-weight: bold;
+}
+
+.error {
+  color: #a50808;
+}
