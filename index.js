@@ -26,6 +26,9 @@ app.use(flash());
 app.get('/greeted', greetedRoutes.getForm);
 app.post('/greeted', greetedRoutes.add);
 
+app.get('/counter/:username', greetedRoutes.counter);
+app.get('/counter', greetedRoutes.counter);
+
 //start the server
 var server = app.listen(3000, function(){
 var host = server.address().address;

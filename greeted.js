@@ -25,7 +25,7 @@ module.exports = function(){
       req.flash('greetMessage', 'Hello, ');
     }
     else {
-      req.flash('error', 'Name already exists!');
+      req.flash('error', 'Welcome back, ' + username);
     }
   }
 
@@ -41,7 +41,7 @@ module.exports = function(){
 
   const counter = function(req,res){
 
-  var username = req.body.username;
+  var username = req.parms.username;
   const greetedCounter = counterMap[username];
   res.send("Hello,"+ " " + username + " " +"has been greeted" +" " + greetedCounter +" "+"time(s)")
 
