@@ -1,7 +1,13 @@
-<h1>Greetings<h1>
+<div class="container">
 
-<ul>
-  {{#each greetings}}
-  <a href = "/counter/{{this}}"><li>{{this}}</li>
-  {{/each}}
-</ul>
+  <h1>Greetings<h1>
+
+  <a class="add" href="/greetings/add">Add name to be greeted</a>
+
+ <ul>
+   {{#each greetings}}
+   <a href="counter/{{this}}"><li>{{this}}</li>
+   {{/each}}
+ </ul>
+
+ <div>

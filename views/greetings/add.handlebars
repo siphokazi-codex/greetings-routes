@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Greeting</h1>
+
+  <form action="/greetings/add" method="post">
+    <label>Enter name:<label>
+    <input type="text" name="username" placeholder="Type name to greet"></br>
+    <input class="greet" type="submit" name="" value="Greet Me"><br><br>
+
+
+    <div class="greetMessage">
+      {{messages.greetMessage}}
+      {{greetings}}
+      <br>
+      <br>
+    </div>
+
+    {{#if messages.error}}
+      <div class="error">
+        {{messages.error}}
+        <br>
+        <br>
+      </div>
+    {{/if}}
+  </form>
+</div>

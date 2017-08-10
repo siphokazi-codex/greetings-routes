@@ -7,16 +7,23 @@ module.exports = function(){
     res.render('greetings/index', {greetings : greetedList});
   };
 
+  const addScreen = function(req, res) {
+      res.render('greetings/add');
+  }
+
   const add = function(req, res){
 
-  var username = req.params.username;
+  var username = req.body.username;
 
   var foundName = greetedList.find(function(currentName){
     return currentName === username;
   });
 
+
   if(username && !foundName){
     greetedList.push(username);
+    //req.flash('greetMessage', 'Hello')
+
   }
 
   if(counterMap[username] === undefined){
@@ -25,16 +32,18 @@ module.exports = function(){
     counterMap[username] ++;
     const greetedCounter = counterMap[username]
 
-    res.send('Hello ' + username)
-    //;res.redirect('/greeted');
+    res.redirect('/greeted');
+    //res.redirect('greeted/add');
 
   }
 
   const counter = function(req,res){
 
   var username = req.params.username;
+
+  //var username = req.body.username;
   console.log(counterMap[username]);
-const greetedCounter = counterMap[username];
+  const greetedCounter = counterMap[username];
   res.send("Hello,"+ " " + username + " " +"has been greeted" +" " + greetedCounter +" "+"time(s)")
 
   }
@@ -43,6 +52,7 @@ const greetedCounter = counterMap[username];
 
     index,
     add,
-    counter
+    counter,
+    addScreen
   }
 }
